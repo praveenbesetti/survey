@@ -1,15 +1,13 @@
-import React from 'react';
+import { Link, useRouter } from 'expo-router'; // Added useRouter
 import {
-  View,
-  Text,
+  Dimensions,
+  ImageBackground,
   ScrollView,
   StyleSheet,
+  Text,
   TouchableOpacity,
-  Image,
-  ImageBackground,
-  Dimensions
+  View
 } from 'react-native';
-import { Link, useRouter } from 'expo-router'; // Added useRouter
 
 const { width } = Dimensions.get('window');
 
@@ -61,12 +59,12 @@ export function Landing() {
                 <Text style={styles.glowBtnText}>Shop Now →</Text>
               </TouchableOpacity>
             </Link>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               style={styles.outlineBtn}
               onPress={() => router.push('/offers')} // Example usage of router
             >
               <Text style={styles.outlineBtnText}>View Offers</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </View>
         </View>
       </View>
@@ -162,7 +160,7 @@ const styles = StyleSheet.create({
   heroDescription: { textAlign: 'center', fontSize: 16, color: '#6B7280', lineHeight: 24, marginBottom: 30 },
   heroButtons: { width: '100%', gap: 12 },
   glowBtn: { backgroundColor: '#16a34a', paddingVertical: 16, borderRadius: 16, alignItems: 'center' },
-  glowBtnText: { color: 'white', fontSize: 18, fontWeight: 'bold', width:'50%' },
+  glowBtnText: { color: 'white', fontSize: 18, fontWeight: 'bold', width:'80%', textAlign:'center', paddingHorizontal:10 },
   outlineBtn: { borderWidth: 2, borderColor: '#16a34a', paddingVertical: 16, borderRadius: 16, alignItems: 'center' },
   outlineBtnText: { color: '#16a34a', fontSize: 18, fontWeight: 'bold' },
   featuresSection: { padding: 20, gap: 16 },

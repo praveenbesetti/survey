@@ -7,13 +7,14 @@
     "orientation": "portrait",
     "icon": "./assets/images/leaf.jpg",
     "scheme": "HariyaliMart",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "light" ,
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.praveenbesetti.myfarmapp"
     },
     "android": {
+      "userInterfaceStyle": "light",
       "package": "com.praveenbesetti.myfarmapp",
       "adaptiveIcon": {
         "backgroundColor": "#ffffff",
