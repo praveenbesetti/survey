@@ -26,6 +26,7 @@ interface ConsumptionItem {
 }
 
 interface FormState {
+  stateName:string,
   villageId:string,
   wardArea: string;
   doorNumber: string;
@@ -119,6 +120,7 @@ const App = () => {
   const router = useRouter();
   const [agentData, setAgentData] = useState(null);
     const [form, setForm] = useState<FormState>({
+      stateName:'',
       villageId:'',
       wardArea: '',
       doorNumber: '',
@@ -239,6 +241,7 @@ const toggleQuestion = (id) => {
 
     const payload = {
       ...form,
+      stateName:agentData?.stateName,
       villageId:agentData?.villageId,
       surveyorId: agentData?.SurveyorId,
       districtName: agentData?.districtName,
@@ -278,6 +281,7 @@ const toggleQuestion = (id) => {
         }
         const agent = JSON.parse(savedValue);
         setAgentData({
+          stateName:agent?.stateName || "",
           villageId:agent?.villageId || "",
           districtName: agent?.districtName || "",
           mandalName: agent?.mandalName || "",
@@ -294,6 +298,7 @@ const toggleQuestion = (id) => {
 
   const resetForm = () => {
     setForm({
+      stateName:'',
       villageId:'',
       wardArea: '',
       doorNumber: '',
